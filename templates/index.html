@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Startup Idea Validator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Startup Idea Validator</h1>
+    <p>Paste your big idea and get instant feedback.</p>
+
+    <form method="POST" action="/">
+      <textarea name="idea" required>{{ idea }}</textarea>
+      <button type="submit">Validate Idea</button>
+    </form>
+
+    <div class="result">
+      <h2>Result:</h2>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+</body>
+</html>
